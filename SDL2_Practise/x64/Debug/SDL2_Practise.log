@@ -1,0 +1,3 @@
+﻿  Player.cpp
+C:\Users\Daan\source\repos\SDL2 practise\SDL2_Practise\SDL2_Practise\Player.cpp(62,17): warning C4305: '+=': truncation from 'double' to 'float'
+  SDL2_Practise.vcxproj -> C:\Users\Daan\source\repos\SDL2 practise\SDL2_Practise\x64\Debug\SDL2_Practise.exe

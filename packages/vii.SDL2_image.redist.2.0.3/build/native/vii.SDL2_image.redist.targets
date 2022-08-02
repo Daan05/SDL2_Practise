@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="vii_SDL2_image_redist_init;vii_SDL2_image_redist_init_2">
+  <PropertyGroup Label="Default initializers for properties">
+    <Linkage-vii_SDL2_image_redist Condition="'$(Linkage-vii_SDL2_image_redist)' == ''">dynamic</Linkage-vii_SDL2_image_redist>
+    <CallingConvention-vii_SDL2_image_redist Condition="'$(CallingConvention-vii_SDL2_image_redist)' == ''">cdecl</CallingConvention-vii_SDL2_image_redist>
+  </PropertyGroup>
+  <Target Name="vii_SDL2_image_redist_init">
+    <vii_SDL2_image_redist_Contains Text="Linkage-dynamic" Library="vii_SDL2_image_redist" Value="dynamic" Condition="'$(Linkage-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="Linkage-static" Library="vii_SDL2_image_redist" Value="static" Condition="'$(Linkage-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="Linkage-ltcg" Library="vii_SDL2_image_redist" Value="ltcg" Condition="'$(Linkage-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="Linkage-sxs" Library="vii_SDL2_image_redist" Value="sxs" Condition="'$(Linkage-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="Linkage-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="CallingConvention-cdecl" Library="vii_SDL2_image_redist" Value="cdecl" Condition="'$(CallingConvention-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="CallingConvention-stdcall" Library="vii_SDL2_image_redist" Value="stdcall" Condition="'$(CallingConvention-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="CallingConvention-fastcall" Library="vii_SDL2_image_redist" Value="fastcall" Condition="'$(CallingConvention-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="CallingConvention-thiscall" Library="vii_SDL2_image_redist" Value="thiscall" Condition="'$(CallingConvention-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+    <vii_SDL2_image_redist_Contains Text="CallingConvention-clrcall" Library="vii_SDL2_image_redist" Value="clrcall" Condition="'$(CallingConvention-vii_SDL2_image_redist)'==''">
+      <Output TaskParameter="Result" PropertyName="CallingConvention-vii_SDL2_image_redist" />
+    </vii_SDL2_image_redist_Contains>
+  </Target>
+  <Target Name="vii_SDL2_image_redist_init_2">
+    <SetEnv Condition="'$(Platform.ToLower())' == 'win32'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+    <SetEnv Condition="'$(Platform.ToLower())' == 'x64'" Name="PATH" Prefix="true" Value="$(MSBuildThisFileDirectory)../..//build/native/bin/x64">
+      <Output TaskParameter="OutputEnvironmentVariable" PropertyName="PATH" />
+    </SetEnv>
+  </Target>
+  <ItemGroup Label="Win32" Condition="'$(Platform.ToLower())' == 'win32'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libjpeg-9.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libpng16-16.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libtiff-5.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libwebp-7.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\SDL2_image.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\zlib1.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup Label="x64" Condition="'$(Platform.ToLower())' == 'x64'">
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libjpeg-9.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libpng16-16.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libtiff-5.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libwebp-7.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\SDL2_image.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\zlib1.dll" Condition="(('$(AppContainerApplication.ToLower())' == 'true')) OR (('$(TargetPlatformIdentifier.ToLower())' == 'windows phone' And '$(TargetPlatformVersion)' == '8.0'))">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)\default-propertiesui.xml" />
+  </ItemGroup>
+  <Target Name="vii_SDL2_image_redist_AfterBuild" AfterTargets="AfterBuild" />
+  <Target Name="vii_SDL2_image_redist_AfterBuild_Win32" Label="Win32" Condition="'$(Platform.ToLower())' == 'win32'" AfterTargets="vii_SDL2_image_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libjpeg-9.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libpng16-16.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libtiff-5.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\libwebp-7.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\SDL2_image.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/Win32\zlib1.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="vii_SDL2_image_redist_AfterBuild_x64" Label="x64" Condition="'$(Platform.ToLower())' == 'x64'" AfterTargets="vii_SDL2_image_redist_AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libjpeg-9.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libpng16-16.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libtiff-5.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\libwebp-7.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\SDL2_image.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../..//build/native/bin/x64\zlib1.dll" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
+  </Target>
+  <UsingTask TaskName="vii_SDL2_image_redist_Contains" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll" TaskFactory="CodeTaskFactory">
+    <ParameterGroup>
+      <Text Output="false" ParameterType="System.String" />
+      <Library Output="false" Required="true" ParameterType="System.String" />
+      <Value Output="false" Required="true" ParameterType="System.String" />
+      <Result Output="true" ParameterType="System.String" />
+    </ParameterGroup>
+    <Task>
+      <Code>Result = ((Text ?? "").Split(';').Contains(Library) ) ? Value : String.Empty;</Code>
+    </Task>
+  </UsingTask>
+</Project>
