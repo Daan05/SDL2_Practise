@@ -58,12 +58,12 @@ void Player::HandleGravity()
 	ChangeY(-gravity);
 
 	// Jump physics
-	if (gravity < 8)
-		gravity += 0.2;
+	if (gravity < 8.0f)
+		gravity += 0.2f;
 
 	// If on ground dont go further down
 	if (IsOnGround())
-		gravity = 0;
+		gravity = 0.0f;
 }
 
 bool Player::IsOnGround()
